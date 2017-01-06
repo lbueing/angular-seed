@@ -1,0 +1,82 @@
+[
+  {
+    "english": "knife",
+    "foreignWord": "hnífur",
+    "parOfSpeech": "noun",
+    "category": "kitchen",
+    "language": "Icelandic",
+    "": ""
+  },
+  {
+    "english": "fork",
+    "foreignWord": "gafall",
+    "parOfSpeech": "noun",
+    "category": "kitchen",
+    "language": "Icelandic",
+    "": ""
+  },
+  {
+    "english": "spoon",
+    "foreignWord": "skeið",
+    "parOfSpeech": "noun",
+    "category": "kitchen",
+    "language": "Icelandic",
+    "": ""
+  },
+  {
+    "english": "plate",
+    "foreignWord": "diskur",
+    "parOfSpeech": "noun",
+    "category": "kitchen",
+    "language": "Icelandic",
+    "": ""
+  },
+  {
+    "english": "that",
+    "foreignWord": "það",
+    "parOfSpeech": "pronoun",
+    "category": "",
+    "language": "Icelandic",
+    "": ""
+  },
+  {
+    "english": "not",
+    "foreign": "ekki",
+    "parOfSpeech": "adverb",
+    "category": "",
+    "language": "Icelandic",
+    "": ""
+  },
+  {
+    "english": "to eat",
+    "foreign": "að borða",
+    "parOfSpeech": "verb",
+    "category": "kitchen",
+    "language": "Icelandic",
+    "": ""
+  },
+  {
+    "english": "to cook",
+    "foreign": "að elda",
+    "parOfSpeech": "verb",
+    "category": "kitchen",
+    "language": "Icelandic",
+    "": ""
+  },
+  {
+    "english": "snow",
+    "foreign": "snjór",
+    "parOfSpeech": "noun",
+    "category": "weather",
+    "language": "Icelandic",
+    "": ""
+  },
+  {
+    "english": "to snow",
+    "foreign": "að snjóa",
+    "parOfSpeech": "verb",
+    "category": "weather",
+    "language": "Icelandic",
+    "": ""
+  }
+]

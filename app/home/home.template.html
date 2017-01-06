@@ -1,0 +1,31 @@
+<h3>Browse Languages</h3>
+<div class="container-fluid">
+
+  <div class="row">
+    <div class="col-md-2">
+
+
+      <p>
+        Search:
+        <input ng-model="$ctrl.query" />
+      </p>
+
+      <!-- <p>
+        Sort by:
+        <select ng-model="$ctrl.orderProp">
+          <option value="name">Alphabetical</option>
+          <option value="age">Newest</option>
+        </select>
+      </p> -->
+
+    </div>
+    <div  class="col-md-10">
+      <ul>
+        <li ng-repeat="language in $ctrl.languages | filter:$ctrl.query">
+          <a href="#!/home/{{language.name}}">{{language.name}}</a>
+        </li>
+      </ul>
+
+    </div>
+  </div>
+</div>
