@@ -10,7 +10,7 @@ angular.
         when('/home', {
           template: '<home></home>'
         }).
-        when('/home/languageName', {
+        when('/home/:languageName', {
           template: '<language-detail></language-detail>'
         }).
         otherwise('/home');

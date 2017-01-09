@@ -11,7 +11,7 @@ angular.
 
 
         $http.get('languages/' + $routeParams.languageName + '.json').then(function(response) {
-          self.language = response.data;
+          self.words = response.data;
         });
       }
     ]

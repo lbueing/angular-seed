@@ -1,1 +1,28 @@
 
+<p>
+  Search:
+  <input ng-model="$ctrl.query" />
+</p>
+
+<table>
+    <thead>
+        <tr>
+            <th>Foreign Word</th>
+            <th>English Word</th>
+            <th>Part of Speech</th>
+            <th>Category</th>
+            <th>Language</th>
+            <th>Sound</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="word in $ctrl.words | filter:$ctrl.query">
+            <td>{{word.foreignWord}}</td>
+            <td>{{word.english}}</td>
+            <td>{{word.partOfSpeech}}</td>
+            <td>{{word.category}}</td>
+            <td>{{word.language}}</td>
+            <td></td>
+        </tr>
+    </tbody>
+</table>

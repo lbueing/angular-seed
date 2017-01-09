@@ -2,7 +2,7 @@
   {
     "english": "knife",
     "foreignWord": "hnífur",
-    "parOfSpeech": "noun",
+    "partOfSpeech": "noun",
     "category": "kitchen",
     "language": "Icelandic",
     "": ""
@@ -10,7 +10,7 @@
   {
     "english": "fork",
     "foreignWord": "gafall",
-    "parOfSpeech": "noun",
+    "partOfSpeech": "noun",
     "category": "kitchen",
     "language": "Icelandic",
     "": ""
@@ -18,7 +18,7 @@
   {
     "english": "spoon",
     "foreignWord": "skeið",
-    "parOfSpeech": "noun",
+    "partOfSpeech": "noun",
     "category": "kitchen",
     "language": "Icelandic",
     "": ""
@@ -26,7 +26,7 @@
   {
     "english": "plate",
     "foreignWord": "diskur",
-    "parOfSpeech": "noun",
+    "partOfSpeech": "noun",
     "category": "kitchen",
     "language": "Icelandic",
     "": ""
@@ -34,47 +34,47 @@
   {
     "english": "that",
     "foreignWord": "það",
-    "parOfSpeech": "pronoun",
+    "partOfSpeech": "pronoun",
     "category": "",
     "language": "Icelandic",
     "": ""
   },
   {
     "english": "not",
-    "foreign": "ekki",
-    "parOfSpeech": "adverb",
+    "foreignWord": "ekki",
+    "partOfSpeech": "adverb",
     "category": "",
     "language": "Icelandic",
     "": ""
   },
   {
     "english": "to eat",
-    "foreign": "að borða",
-    "parOfSpeech": "verb",
+    "foreignWord": "að borða",
+    "partOfSpeech": "verb",
     "category": "kitchen",
     "language": "Icelandic",
     "": ""
   },
   {
     "english": "to cook",
-    "foreign": "að elda",
-    "parOfSpeech": "verb",
+    "foreignWord": "að elda",
+    "partOfSpeech": "verb",
     "category": "kitchen",
     "language": "Icelandic",
     "": ""
   },
   {
     "english": "snow",
-    "foreign": "snjór",
-    "parOfSpeech": "noun",
+    "foreignWord": "snjór",
+    "partOfSpeech": "noun",
     "category": "weather",
     "language": "Icelandic",
     "": ""
   },
   {
     "english": "to snow",
-    "foreign": "að snjóa",
-    "parOfSpeech": "verb",
+    "foreignWord": "að snjóa",
+    "partOfSpeech": "verb",
     "category": "weather",
     "language": "Icelandic",
     "": ""
