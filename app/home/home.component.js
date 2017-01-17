@@ -21,7 +21,7 @@ angular.
 
       var self = this;
 
-      $http.get('languages/languages.json').then(function(response) {
+      $http.get('http://localhost:3000/api/languages').then(function(response) {
         self.languages = response.data;
       });
     }]

@@ -13,6 +13,9 @@ angular.
         when('/home/:languageName', {
           template: '<language-detail></language-detail>'
         }).
+        when('/add-a-word', {
+          template: '<add-a-word></add-a-word>'
+        }).
         otherwise('/home');
     }
   ]);

@@ -4,7 +4,8 @@
 angular.module('capstoneApp', [
   'ngRoute',
   'home',
-  'languageDetail'
+  'languageDetail',
+  'addAWord'
 ]);
 // config(['$locationProvider', '$routeProvider', function($locationProvider, $routeProvider) {
 //   $locationProvider.hashPrefix('!');

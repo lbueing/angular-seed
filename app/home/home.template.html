@@ -21,8 +21,8 @@
     </div>
     <div  class="col-md-3">
       <ul>
-        <li ng-repeat="language in $ctrl.languages | filter:$ctrl.query">
-          <a href="#!/home/{{language.name}}">{{language.name}}</a>
+        <li ng-repeat="language in $ctrl.languages | orderBy: 'language' | filter:$ctrl.query">
+          <a href="#!/home/{{language.name}}">{{language.language}}</a>
         </li>
       </ul>
 
