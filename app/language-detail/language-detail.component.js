@@ -10,9 +10,8 @@ angular.
         var self = this;
 
 
-        $http.get('http://localhost:3000/api/words/search?query=' + $routeParams.languageName).then(function(response) {
+        $http.get('http://localhost:3000/api/words/search?query=' + $routeParams.language).then(function(response) {
           self.words = response.data;
-          console.log(response);
         });
       }
     ]
