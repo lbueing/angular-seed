@@ -4,6 +4,10 @@
   <input ng-model="$ctrl.query" />
 </p>
 
+<div id="audio_embeds">
+
+</div>
+
 <table>
     <thead>
         <tr>
@@ -22,7 +26,7 @@
             <td>{{word.part_of_speech}}</td>
             <td>{{word.category}}</td>
             <td>{{word.language}}</td>
-            <td></td>
+            <td><button id="{{word.id}}" value="Play word" ng-click="play()"></button></td>
         </tr>
     </tbody>
 </table>

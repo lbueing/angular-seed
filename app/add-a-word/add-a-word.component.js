@@ -12,16 +12,42 @@ angular.
         self.languages = response.data;
       });
 
-      $scope.save_word = function(){
-        $http.post('http://localhost:3000/api/words',
-        {
-           'foreign_word'  : $scope.new_word.foreign_word,
-           'english_word' : $scope.new_word.english_word,
-           'language' : $scope.new_word.language
-       });
-       $scope.new_word = null;
-      };
+      // var array = [];
+      //
+      // $scope.buffer_clip = function() {
+      //   console.log('hey');
+      //   blob = $scope.new_word.recordedInput;
+      //   console.log(blob);
+      //   var reader = new FileReader();
+      //   reader.onloadend = function () {
+      //     console.log(reader.result);
+      //     console.log('hey');
+      //   };
+      //
+      //   // reader.readAsBinaryString(blob);
+      //   reader.readAsArrayBuffer(blob);
+      // }
 
+
+
+      $scope.save_word = function(){
+        var blob = $scope.new_word.recordedInput;
+        var reader = new FileReader();
+        reader.onloadend = function () {
+          console.log(reader.result);
+          $http.post('http://localhost:3000/api/words',
+          {
+             'foreign_word'  : $scope.new_word.foreign_word,
+             'english_word' : $scope.new_word.english_word,
+             'language' : $scope.new_word.language,
+             'sound_clip' : reader.result
+           });
+           $scope.new_word = null;
+          };
+          // reader.readAsBinaryString(blob);
+          // reader.readAsArrayBuffer(blob);
+          reader.readAsDataURL(blob);
+        };
 
     }]
   });
