@@ -6,5 +6,6 @@ angular.module('capstoneApp', [
   'home',
   'languageDetail',
   'addAWord',
-  'angularAudioRecorder'
+  'angularAudioRecorder',
+  'health'
 ]);

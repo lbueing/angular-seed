@@ -4,7 +4,7 @@ angular.
   module('capstoneApp').
   config(['$locationProvider' ,'$routeProvider',
     function config($locationProvider, $routeProvider) {
-      $locationProvider.hashPrefix('!');
+      // $locationProvider.hashPrefix('!');
 
       $routeProvider.
         when('/home', {
@@ -16,6 +16,9 @@ angular.
         when('/add-a-word', {
           template: '<add-a-word></add-a-word>'
         }).
+        // when('/_ah/health', {
+        //   template: '<health></health>'
+        // }).
         otherwise('/home');
     }
   ]);
