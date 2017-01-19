@@ -20,7 +20,7 @@
         </tr>
     </thead>
     <tbody>
-        <tr ng-repeat="word in $ctrl.words | filter:$ctrl.query">
+        <tr ng-repeat="word in $ctrl.words | filter:$ctrl.query | orderBy: 'word'">
             <td>{{word.foreign_word}}</td>
             <td>{{word.english_word}}</td>
             <td>{{word.part_of_speech}}</td>
