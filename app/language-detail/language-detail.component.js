@@ -12,14 +12,15 @@ angular.
 
         $http.get('http://localhost:3000/api/words/search?query=' + $routeParams.language).then(function(response) {
           self.words = response.data["words"];
-          // for (var i = 0; i < response.data.length; i ++) {
-          //   console.log('hey');
-          //   self.words[i].sound_clip = new Audio(response.data[i].sound_clip);
-          // }
-
         });
 
+        $scope.play_sound = function(event) {
+          $http.get('http://localhost:3000/api/words/' + event.target.id).then(function(response) {
+            var sound = new Audio(response.data.sound_clip)
+            sound.play();
+          });
 
+        };
       }
     ]
   });

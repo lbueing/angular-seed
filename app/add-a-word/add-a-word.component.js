@@ -33,21 +33,29 @@ angular.
       $scope.save_word = function(){
         var blob = $scope.new_word.recordedInput;
         var reader = new FileReader();
-        reader.onloadend = function () {
-          console.log(reader.result);
+        if (blob) {
+          reader.onloadend = function () {
           $http.post('http://localhost:3000/api/words',
           {
              'foreign_word'  : $scope.new_word.foreign_word,
              'english_word' : $scope.new_word.english_word,
              'language' : $scope.new_word.language,
-             'sound_clip' : reader.result
+             'sound_clip' : reader.result,
+             'sound_present' : true
            });
-           $scope.new_word = null;
           };
-          // reader.readAsBinaryString(blob);
-          // reader.readAsArrayBuffer(blob);
           reader.readAsDataURL(blob);
-        };
+        } else {
+          $http.post('http://localhost:3000/api/words',
+          {
+             'foreign_word'  : $scope.new_word.foreign_word,
+             'english_word' : $scope.new_word.english_word,
+             'language' : $scope.new_word.language,
+             'sound_present' : false
+           });
+        }
+        $scope.new_word = null;
+      };
 
     }]
   });

@@ -26,7 +26,11 @@
             <td>{{word.part_of_speech}}</td>
             <td>{{word.category}}</td>
             <td>{{word.language}}</td>
-            <td><button id="{{word.id}}" value="Play word" ng-click="play()"></button></td>
+            <td>
+              <span ng-if="word.sound_present == true ">
+                <button id="{{word.id}}" ng-click="play_sound($event)">Play clip</button>
+              </span>
+            </td>
         </tr>
     </tbody>
 </table>
