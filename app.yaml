@@ -1,6 +1,5 @@
 env: flex
 runtime: nodejs
 
-env_variables:
-  GCLOUD_PROJECT: <your-project-id>
-  API_KEY: <your-api-key>
+health_check:
+  enable_health_check: False
