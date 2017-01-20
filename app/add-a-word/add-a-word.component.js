@@ -31,15 +31,16 @@ angular.
 
 
       $scope.save_word = function(){
-        var blob = $scope.new_word.recordedInput;
+        var scope = $scope.new_word;
+        var blob = scope.recordedInput;
         var reader = new FileReader();
         if (blob) {
           reader.onloadend = function () {
           $http.post('http://localhost:3000/api/words',
           {
-             'foreign_word'  : $scope.new_word.foreign_word,
-             'english_word' : $scope.new_word.english_word,
-             'language' : $scope.new_word.language,
+             'foreign_word'  : scope.foreign_word,
+             'english_word' : scope.english_word,
+             'language' : scope.language,
              'sound_clip' : reader.result,
              'sound_present' : true
            });
@@ -48,9 +49,9 @@ angular.
         } else {
           $http.post('http://localhost:3000/api/words',
           {
-             'foreign_word'  : $scope.new_word.foreign_word,
-             'english_word' : $scope.new_word.english_word,
-             'language' : $scope.new_word.language,
+             'foreign_word'  : scope.foreign_word,
+             'english_word' : scope.english_word,
+             'language' : scope.language,
              'sound_present' : false
            });
         }
