@@ -1,11 +1,13 @@
-<h3>Browse Languages</h3>
+
+
+<h3 class="f6 title">Browse Languages</h3>
 <div class="container-fluid">
 
   <div class="row">
     <div class="col-md-2">
 
 
-      <p>
+      <p class="f6 title">
         Search:
         <input ng-model="$ctrl.query" />
       </p>
@@ -19,15 +21,17 @@
       </p> -->
 
     </div>
-    <div  class="col-md-3">
-      <ul>
-        <li ng-repeat="language in $ctrl.languages | orderBy: 'language' | filter:$ctrl.query">
-          <a href="#!/home/{{language.language}}">{{language.language}}</a>
-        </li>
-      </ul>
+    <div class="container lang-cont">
+      <div class="row">
+        <ul class="lang-list three columns f4" ng-repeat="language in $ctrl.languages | orderBy: 'language' | filter:$ctrl.query">
+          <li>
+            <a href="#!/home/{{language.language}}">{{language.language}}</a>
+          </li>
+        </ul>
 
+      </div>
     </div>
-    <div class="col-md-2">
+    <div class="">
       <input onclick='responsiveVoice.speak("Hello World");' type='button' value='🔊 Play' />
       <!-- <form>
           Word: <input type="text" ng-model="$ctrl.soundclip.word">

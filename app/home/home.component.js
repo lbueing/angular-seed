@@ -10,7 +10,7 @@ angular.
 
       var self = this;
 
-      $http.get('http://localhost:3000/api/languages').then(function(response) {
+      $http.get('https://talabackend.herokuapp.com/api/languages').then(function(response) {
         self.languages = response.data;
       });
     }]

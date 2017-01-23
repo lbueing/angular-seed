@@ -1,51 +1,68 @@
-<form name="myForm" ng-model="new_word">
-  <label>
-     Foreign Language Word:
-     <input type="text" ng-model="new_word.foreign_word">
-  </label><br>
-  <label>
-     English Word:
-     <input type="text" ng-model="new_word.english_word">
-  </label><br>
-  <label>
-     Part of Speech:
-     <input type="text" ng-model="new_word.part_of_speech">
-  </label><br>
-  <label>
-     Category:
-     <input type="text" ng-model="new_word.category">
-  </label><br>
-  <label>
-     Language:
-     <select ng-model="new_word.language">
-      <option ng-repeat="language in $ctrl.languages | orderBy: 'language'">{{language.language}}</option>
-    </select>
-  </label><br>
-  <label>
-     Sound:
 
-      <ng-audio-recorder id='audioInput' audio-model='new_word.recordedInput'>
-      <!-- Start controls, exposed via recorder-->
-      <div ng-if="recorder.isAvailable">
-        <button ng-click="recorder.startRecord()" type="button" ng-disabled="recorder.status.isRecording">
-            Start Record
-        </button>
-        <button ng-click="recorder.stopRecord()" type="button" ng-disabled="recorder.status.isRecording === false">
-            Stop Record
-        </button>
-        <button ng-click="recorder.playbackRecording()" type="button"
-                ng-disabled="recorder.status.isRecording || !recorder.audioModel">
-            Play Back
-        </button>
-      </div>
+<div class="container">
+    <div class"row">
+      <form name="myForm" ng-model="new_word">
+        <div class="six columns">
+          <label>
+            Foreign Language Word:
+            <input type="text" ng-model="new_word.foreign_word">
+          </label>
+        </div>
+        <div class="six columns">
+          <label>
+            English Word:
+            <input type="text" ng-model="new_word.english_word">
+          </label>
+        </div>
+        <div class="six columns">
+          <label>
+            Part of Speech:
+            <input type="text" ng-model="new_word.part_of_speech">
+          </label>
+        </div>
+        <div class="six columns">
+          <label>
+             Category:
+             <input type="text" ng-model="new_word.category">
+          </label>
+        </div>
+        <div class="six columns">
+          <label>
+             Language:
+             <select ng-model="new_word.language">
+              <option ng-repeat="language in $ctrl.languages | orderBy: 'language'">{{language.language}}</option>
+            </select>
+          </label>
+        </div>
+        <div class="six columns">
+          <label>
+              <ng-audio-recorder id='audioInput' audio-model='new_word.recordedInput'>
+              <!-- Start controls, exposed via recorder-->
+              <div ng-if="recorder.isAvailable">
+                Sound: <button ng-click="recorder.startRecord()" type="button" ng-disabled="recorder.status.isRecording">
+                    Start Record
+                </button><br>
+                <button ng-click="recorder.stopRecord()" type="button" ng-disabled="recorder.status.isRecording === false">
+                    Stop Record
+                </button><br>
+                <button ng-click="recorder.playbackRecording()" type="button"
+                        ng-disabled="recorder.status.isRecording || !recorder.audioModel">
+                    Play Back
+                </button>
+              </div>
 
-      <div ng-if="!recorder.isAvailable">
-        Message for users when recording is not possible.
-      </div>
-      <!-- End controls-->
-    </ng-audio-recorder>
+              <div ng-if="!recorder.isAvailable">
+                Message for users when recording is not possible.
+              </div>
+              <!-- End controls-->
+            </ng-audio-recorder>
 
-  </label><br>
+          </label>
+        </div>
+
+    </div>
+</div>
+
 
   <input class="button-primary" type="submit" value="Add Word" ng-click="save_word()">
 </form>

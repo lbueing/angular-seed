@@ -1,12 +1,17 @@
 /* app css stylesheet */
 
-.container {
+body {
+  background-color: #FEFFFA;
+}
+
+.heading {
   margin-left: 1%;
   border-bottom: 0.1em solid black;
 }
 
 .header {
   margin-bottom: 0%;
+  color: #6CC551;
 }
 
 .menu {
@@ -14,6 +19,20 @@
   margin-top: 2em;
   margin-bottom: 0%;
   padding: 0 0 0.5em;
+}
+
+.menu a{
+  color: #8D6B94;
+  text-decoration: none;
+}
+
+.title {
+  color: #5D4B60;
+  margin-left: 1%
+}
+
+p.title {
+  font-size: 1.1em;
 }
 
 /*.menu:before {
@@ -31,4 +50,72 @@
 .menu > li + li:before {
   content: "|";
   padding-right: 0.3em;
+}
+
+.lang-cont {
+  margin-left: 5%;
+}
+
+.lang-list {
+  margin-left: 0%;
+  margin-bottom: 0%;
+}
+
+.lang-list a {
+  color: #2C6BC9;
+  text-decoration: none;
+  float: left;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a:hover {
+  color: #8ED081;
+}
+
+
+.six, .columns {
+  margin-left: 0%;
+  text-align: right;
+}
+
+.button-primary {
+  float: right;
+  margin-right: 6%;
+}
+
+.table {
+  margin-left: 5%;
+  font-size: 1.2em;
+  color: #392B58;
+}
+
+.f1 {
+  font-family: 'Courgette', cursive;
+}
+
+.f2 {
+  font-family: 'Shadows Into Light Two', cursive;
+}
+
+.f3 {
+  font-family: 'Patrick Hand', cursive;
+}
+
+.f4 {
+  font-family: 'Maven Pro', sans-serif;
+}
+
+.f5 {
+  font-family: 'Delius', cursive;
+}
+
+.f6 {
+  font-family: 'Cormorant', serif;
+}
+
+.f7 {
+  font-family: 'Josefin Sans', sans-serif;;
 }

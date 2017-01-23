@@ -8,7 +8,7 @@ angular.
 
       var self = this;
 
-      $http.get('http://localhost:3000/api/languages').then(function(response) {
+      $http.get('https://talabackend.herokuapp.com/api/languages').then(function(response) {
         self.languages = response.data;
       });
 
@@ -36,22 +36,26 @@ angular.
         var reader = new FileReader();
         if (blob) {
           reader.onloadend = function () {
-          $http.post('http://localhost:3000/api/words',
+          $http.post('https://talabackend.herokuapp.com/api/words',
           {
              'foreign_word'  : scope.foreign_word,
              'english_word' : scope.english_word,
              'language' : scope.language,
+             'part_of_speech' : scope.part_of_speech,
+             'category' : scope.category,
              'sound_clip' : reader.result,
              'sound_present' : true
            });
           };
           reader.readAsDataURL(blob);
         } else {
-          $http.post('http://localhost:3000/api/words',
+          $http.post('https://talabackend.herokuapp.com/api/words',
           {
              'foreign_word'  : scope.foreign_word,
              'english_word' : scope.english_word,
              'language' : scope.language,
+             'part_of_speech' : scope.part_of_speech,
+             'category' : scope.category,
              'sound_present' : false
            });
         }
