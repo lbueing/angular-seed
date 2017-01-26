@@ -1,5 +1,5 @@
 'use strict';
 
-angular.module('playGame', [
+angular.module('spelling', [
   'ngRoute'
 ]);

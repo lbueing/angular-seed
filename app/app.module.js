@@ -6,5 +6,7 @@ angular.module('capstoneApp', [
   'home',
   'languageDetail',
   'addAWord',
-  'angularAudioRecorder'
+  'angularAudioRecorder',
+  'playGame',
+  'spelling'
 ]);

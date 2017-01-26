@@ -16,9 +16,12 @@ angular.
         when('/add-a-word', {
           template: '<add-a-word></add-a-word>'
         }).
-        // when('/_ah/health', {
-        //   template: '<health></health>'
-        // }).
+        when('/play-game', {
+          template: '<play-game></play-game>'
+        }).
+        when('/spelling', {
+          template: '<spelling></spelling>'
+        }).
         otherwise('/home');
     }
   ]);

@@ -12,23 +12,6 @@ angular.
         self.languages = response.data;
       });
 
-      // var array = [];
-      //
-      // $scope.buffer_clip = function() {
-      //   console.log('hey');
-      //   blob = $scope.new_word.recordedInput;
-      //   console.log(blob);
-      //   var reader = new FileReader();
-      //   reader.onloadend = function () {
-      //     console.log(reader.result);
-      //     console.log('hey');
-      //   };
-      //
-      //   // reader.readAsBinaryString(blob);
-      //   reader.readAsArrayBuffer(blob);
-      // }
-
-
 
       $scope.save_word = function(){
         var scope = $scope.new_word;

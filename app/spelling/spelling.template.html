@@ -1,0 +1,38 @@
+<!-- <div>
+  <div>
+    <button id="{{$ctrl.show_word.word.id}}" ng-click="play_sound($event)">Play clip</button>
+
+    <button ng-click="new_word()">Next word</button>
+    <p>{{$scope.show_word}}</p>
+  </div>
+</div> -->
+
+
+<div>
+    <div ng-repeat="w in words">
+        <div ng-if="word_index == $index">
+            <strong>Question {{word_index + 1}}</strong>
+            <button id="{{w.id}}" ng-click="play_sound($event)">Play clip</button>
+
+        </div>
+    </div>
+    <label>Type the correct spelling of the word from the audio clip</label>
+    <input ng-model="correct">
+    <span ng-if="show == undefined ">
+      <button type="submit" ng-click="check()">Check Answer</button>
+    </span>
+    <span ng-if="show == true">
+        <p>correct!</p>
+    </span>
+    <span ng-if="show == false">
+        <p>incorrect :(</p>
+    </span>
+    <span ng-if="show !=undefined && finished == false">
+      <button ng-click="next()">Next</button>
+    </span>
+    <span ng-if="finished == true">
+        <p>Your score is {{number_correct}}/{{words.length}}</p>
+        <button ng-click="play_game">Play another game</button>
+    </span>
+
+</div>

@@ -48,7 +48,7 @@ p.title {
 }
 
 .menu > li + li:before {
-  content: "|";
+  content: " • ";
   padding-right: 0.3em;
 }
 
