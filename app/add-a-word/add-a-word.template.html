@@ -39,13 +39,13 @@
               <ng-audio-recorder id='audioInput' audio-model='new_word.recordedInput'>
               <!-- Start controls, exposed via recorder-->
               <div ng-if="recorder.isAvailable">
-                Sound: <button ng-click="recorder.startRecord()" type="button" ng-disabled="recorder.status.isRecording">
-                    Start Record
+                Sound: <button class="recording" ng-click="recorder.startRecord()" type="button" ng-disabled="recorder.status.isRecording">
+                    Start Recording
                 </button><br>
-                <button ng-click="recorder.stopRecord()" type="button" ng-disabled="recorder.status.isRecording === false">
-                    Stop Record
+                <button class="stopping" ng-click="recorder.stopRecord()" type="button" ng-disabled="recorder.status.isRecording === false">
+                    Stop Recording
                 </button><br>
-                <button ng-click="recorder.playbackRecording()" type="button"
+                <button class="playback" ng-click="recorder.playbackRecording()" type="button"
                         ng-disabled="recorder.status.isRecording || !recorder.audioModel">
                     Play Back
                 </button>

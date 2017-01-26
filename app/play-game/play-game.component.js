@@ -29,20 +29,21 @@ angular.
           var arr = [];
           if (scope.category !== undefined && scope.part_of_speech !== undefined){
             for (var i = 0; i < data.length; i ++) {
-              if (data[i].category === scope.category && data[i].part_of_speech == scope.part_of_speech) {
+              if (data[i].category === scope.category.category && data[i].part_of_speech == scope.part_of_speech.part_of_speech) {
                 arr.push(data[i]);
           }}} else if (scope.part_of_speech !== undefined) {
             for (var j = 0; j < data.length; j ++) {
-              if (data[j].part_of_speech == scope.part_of_speech) {
+              if (data[j].part_of_speech == scope.part_of_speech.part_of_speech) {
                 arr.push(data[j]);
           }}} else if (scope.category !== undefined) {
             for (var k = 0; k < data.length; k ++) {
-              if (data[k].category == scope.category) {
+              if (data[k].category == scope.category.category) {
                 arr.push(data[k]);
           }}} else {
             for (var n = 0; n < data.length; n ++) {
               arr.push(data[n]);
           }}
+          console.log(arr);
             location.search({words: arr}).path('/spelling');
         });
 

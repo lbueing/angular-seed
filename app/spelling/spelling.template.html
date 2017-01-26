@@ -8,18 +8,24 @@
 </div> -->
 
 
-<div>
+<div class="container gameboard">
+  <div class="game">
+
+
     <div ng-repeat="w in words">
         <div ng-if="word_index == $index">
             <strong>Question {{word_index + 1}}</strong>
-            <button id="{{w.id}}" ng-click="play_sound($event)">Play clip</button>
+            <br>
+            <p>Type the correct spelling of the word from the audio clip</p>
+            <button class="playclip" id="{{w.id}}" ng-click="play_sound($event)">Play clip</button>
 
         </div>
     </div>
-    <label>Type the correct spelling of the word from the audio clip</label>
+
     <input ng-model="correct">
+    <br>
     <span ng-if="show == undefined ">
-      <button type="submit" ng-click="check()">Check Answer</button>
+      <button class="checknext" type="submit" ng-click="check()">Check Answer</button>
     </span>
     <span ng-if="show == true">
         <p>correct!</p>
@@ -28,11 +34,12 @@
         <p>incorrect :(</p>
     </span>
     <span ng-if="show !=undefined && finished == false">
-      <button ng-click="next()">Next</button>
+      <button class="checknext" ng-click="next()">Next</button>
     </span>
     <span ng-if="finished == true">
         <p>Your score is {{number_correct}}/{{words.length}}</p>
-        <button ng-click="play_game">Play another game</button>
+        <button class="checknext" ng-click="play_game">Play another game</button>
     </span>
 
+  </div>
 </div>
