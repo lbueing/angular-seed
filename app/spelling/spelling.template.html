@@ -14,27 +14,28 @@
 
     <div ng-repeat="w in words">
         <div ng-if="word_index == $index">
-            <strong>Question {{word_index + 1}}</strong>
+            <strong class="f5">Question {{word_index + 1}}</strong>
             <br>
-            <p>Type the correct spelling of the word from the audio clip</p>
-            <button class="playclip" id="{{w.id}}" ng-click="play_sound($event)">Play clip</button>
+            <p class="f5">Type the correct spelling of the word from the audio clip</p>
+            <button class="playclip f2" id="{{w.id}}" ng-click="play_sound($event)">Play clip</button>
 
         </div>
     </div>
 
-    <input ng-model="correct">
+    <input class="f5" ng-model="correct">
     <br>
     <span ng-if="show == undefined ">
-      <button class="checknext" type="submit" ng-click="check()">Check Answer</button>
+      <button class="checknext f2" type="submit" ng-click="check()">Check Answer</button>
     </span>
     <span ng-if="show == true">
-        <p>correct!</p>
+        <img class="check" src="../assets/greenCheck.jpg"><p class="f5">Nice job!</p></img>
     </span>
     <span ng-if="show == false">
-        <p>incorrect :(</p>
+      <img class="redx" src="../assets/redx.png"> <p class="f5">The correct spelling is {{words[word_index].foreign_word}}</p></img>
     </span>
+  
     <span ng-if="show !=undefined && finished == false">
-      <button class="checknext" ng-click="next()">Next</button>
+      <button class="checknext f2" ng-click="next()">Next</button>
     </span>
     <span ng-if="finished == true">
         <p>Your score is {{number_correct}}/{{words.length}}</p>

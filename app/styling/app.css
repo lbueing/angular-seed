@@ -10,8 +10,11 @@ body {
 }
 
 .header {
+  margin-top: 1vw;
   margin-bottom: 0%;
-  color: #6CC551;
+  width: 15vw;
+  height: auto;
+  margin-left: 2vw;
 }
 
 .menu {
@@ -74,6 +77,10 @@ a:hover {
   text-align: left;
 }
 
+.choose-lang {
+  margin-bottom: 5vw;
+}
+
 .button-primary {
   float: right;
   margin-right: 6%;
@@ -122,6 +129,7 @@ a:hover {
 
 .game {
   text-align: center;
+  font-size: 1.4em;
 }
 
 .gameboard {
@@ -129,7 +137,17 @@ a:hover {
   background-color: #97D9EA;
   margin-top: 10vw;
   border-radius: 10px;
-  border: solid black 1px;
+  border: solid black 3px;
+}
+
+.check {
+  width: 2vw;
+  height: auto;
+}
+
+.redx {
+  width: 1.5vw;
+  height: auto;
 }
 
 .table {

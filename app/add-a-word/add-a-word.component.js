@@ -12,6 +12,14 @@ angular.
         self.languages = response.data;
       });
 
+      $http.get('https://talabackend.herokuapp.com/api/speeches').then(function(response) {
+        console.log(response.data);
+        self.part_of_speeches = response.data;
+      });
+
+      $http.get('https://talabackend.herokuapp.com/api/categories').then(function(response) {
+        self.categories = response.data;
+      });
 
       $scope.save_word = function(){
         var scope = $scope.new_word;

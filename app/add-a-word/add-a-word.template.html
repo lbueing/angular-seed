@@ -17,13 +17,17 @@
         <div class="six columns">
           <label>
             Part of Speech:
-            <input type="text" ng-model="new_word.part_of_speech">
+            <select ng-model="new_word.part_of_speech">
+             <option ng-repeat="part in $ctrl.part_of_speeches | orderBy: 'part'">{{part.part_of_speech}}</option>
+           </select>
           </label>
         </div>
         <div class="six columns">
           <label>
              Category:
-             <input type="text" ng-model="new_word.category">
+             <select ng-model="new_word.category">
+              <option ng-repeat="category in $ctrl.categories | orderBy: 'category'">{{category.category}}</option>
+            </select>
           </label>
         </div>
         <div class="six columns">
